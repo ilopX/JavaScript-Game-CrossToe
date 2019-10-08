@@ -1,0 +1,227 @@
+/* CSS Document */
+
+/* Тело крестика нолика*/
+#crossToe
+{
+	height:425px;
+	width:405px;
+	background:url(../image/backgroundCrossToe.png);
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	padding:20px 20px 20px 5px;
+	float:left;
+	margin:10px;
+	font-family:Arial, Helvetica, sans-serif
+}
+
+/*Полоса очистки от предведущего float стиля*/
+#crossToe .clr
+{
+	width:100%;
+	font-size:0px;
+	line-height:0px;
+	clear:both
+}
+
+/*перебираем 9 ячеек крестика нолика*/
+#crossToe #cells > div:not(.clr)
+{
+	margin-left:15px;
+	width:120px;
+	height:120px;
+	background:url(../image/crossToe.png);
+	float:left;
+	opacity:0.85;
+	cursor:pointer
+}
+
+
+/*очистка межку яцейками*/
+#crossToe #cells .clr
+{
+	height:15px
+}
+
+/*Обьеденненый стиль линиий зачеркивания*/
+#line0, #line1, #line2, #line3, #line4, #line5, #line6, #line7
+{
+	background:url(../image/crossToe.png);
+	position:absolute;
+	z-index:100
+}
+
+/*линии зачеркивания по горизонтали сверху вниз*/
+#line0, #line1, #line2
+{
+	background-position: -9px -182px;
+	width:351px;
+	height:8px;
+	margin:56px 0px 0px 34px
+}
+
+#line1
+{
+	margin-top:191px
+}
+
+#line2
+{
+	margin-top:326px
+}
+
+
+/*линии зачеркивания по вертикали слева на право*/
+#line3, #line4, #line5
+{
+	background-position: 0px -182px;
+	width:9px;
+	height:352px;
+	margin:19px 0px 0px 71px
+}
+
+#line4
+{
+	margin-left:206px
+}
+
+#line5
+{
+	margin-left:341px
+}
+
+/*косые линии зачеркивания*/
+#line6, #line7
+{
+	background-position:-59px -190px;
+	width:301px;
+	height:301px;
+	margin:44px 0px 0px 59px
+}
+
+#line6
+{
+	background-position:-59px -490px;
+}
+
+/*Нижняя панель управления*/
+#crossToe #panel
+{
+	margin-left:15px;
+	overflow:hidden
+}
+
+#crossToe #menu, #selectlevel
+{
+	font-size:12px;
+	font-weight:bold;
+	margin-top:7px;
+	display:inline-block;
+	color:#706300;
+	cursor:pointer;
+	text-shadow: 0px 0px 5px #FFE42D
+}
+
+#crossToe #menu:hover, #selectlevel:hover
+{
+	text-shadow: 0px 0px 6px #ffffbe;
+	color:#534900;
+}
+
+
+#crossToe #menu
+{
+	float:left
+
+}
+#crossToe #selectlevel
+{
+	float:right
+}
+
+/*Панель внутри панели котороя посредине*/
+#crossToe #information
+{
+	margin-left:140px;
+	text-align:center;
+	width:110px;
+	overflow:hidden
+}
+
+/*Общий стиль кнопок ноль и крест*/
+#crossToe #button_O, #button_X, :visited
+{
+	text-indent:-9999px;
+	background:url(../image/crossToe.png);
+	width:33px;
+	height:31px;
+	cursor:pointer;
+	border:none;
+	position:relative
+}
+
+/*Кнопка нолик*/
+#crossToe #button_O
+{
+	background-position:0px -120px;
+	float:left
+}
+#crossToe #button_O:hover { background-position:-33px -120px }
+#crossToe #button_O:active { background-position:-66px -120px }
+
+/*Кнопка крестика*/
+#crossToe #button_X 
+{
+	background-position:0px -151px;
+	float:right
+}
+#crossToe #button_X:hover { background-position:-33px -151px }
+#crossToe #button_X:active { background-position:-66px -151px }
+
+/*Информация о игре*/
+#crossToe #info
+{
+	font-size:26px;
+	display:inline;
+	position:relative
+}
+
+#crossToe #info span
+{
+	font-size:12px;
+
+
+}
+
+/*Активный на данный момент Х или О каким играет пользователь*/
+#crossToe .XO
+{
+	width:120px;
+	height:120px;
+	background:url(../image/crossToe.png);
+	background-position:-240px 0px;
+	opacity:0.0
+}
+
+#crossToe .O
+{
+	width:120px;
+	height:120px;
+	background:url(../image/crossToe.png);
+	background-position:-120px 0px;
+	opacity:0.0
+}
+
+#crossToe .X
+{
+	width:120px;
+	height:120px;
+	background:url(../image/crossToe.png);
+	background-position:-240px 0px;
+	opacity:0.0
+}
+
+
+
+
+
